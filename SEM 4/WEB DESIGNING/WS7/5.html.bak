@@ -1,0 +1,11 @@
+<html>
+	<title>
+		Area of triangle
+	</title>
+	<script>
+		let n1,n2,n3,n4=prompt("Enter the four numbers");
+		let h=prompt("Enter the length of height");
+		let area=parseFloat(b)*parseFloat(h)/2;
+		alert("The area is "+area);
+	</script>
+</html>

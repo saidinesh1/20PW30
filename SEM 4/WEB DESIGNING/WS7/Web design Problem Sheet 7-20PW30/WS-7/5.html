@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS8_5</title>
+</head>
+
+<body>
+    a = <input type="text" id="a">
+    b = <input type="text" id="b">
+    c = <input type="text" id="c">
+    <button id="go">Go</button>
+    <script>
+        btn = document.getElementById('go')
+        btn.addEventListener("click", function () {
+            let a = document.getElementById('a').value
+            let b = document.getElementById('b').value
+            let c = document.getElementById('c').value
+            let s = (a + b + c) / 2
+            alert(`The area for the given details : ${Math.pow(s * (s - a) * (s - b) * (s - c), 0.5)}.`)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_16</title>
+</head>
+
+<body>
+    <h1 class="result"></h1>
+    <script>
+        let prices = [2.98, 4.50, 9.98, 4.49, 6.87]
+        let soldItems = [0, 0, 0, 0, 0]
+        let sentinel = 0
+        while (sentinel >= 0) {
+            let pno = prompt("Enter the product number: ", "")
+            sentinel = pno
+            if (sentinel < 0) {
+                alert("Input for ending the input entered. Showing results now...")
+                break
+            }
+            else if (sentinel > 5) {
+                alert("You've entered a wrong product number.")
+                break
+            }
+            let qno = parseInt(prompt("Enter the quantity for the day: ", ""))
+            soldItems[pno - 1] += qno
+        }
+        console.log(soldItems)
+        let totalPrice = 0
+        for (let i = 0; i < soldItems.length; i++) {
+            console.log(`Inside ${totalPrice}`)
+            totalPrice += soldItems[i] * prices[i]
+        }
+        document.querySelector('.result').innerHTML = `The total retail value of this week is \$${totalPrice}.`
+    </script>
+</body>
+
+</html>

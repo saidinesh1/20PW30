@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_11</title>
+</head>
+
+<body>
+    <p id="text"></p>
+    <script type="module">
+        import * as $C from 'https://cdn.jsdelivr.net/npm/js-combinatorics@1.5.6/combinatorics.min.js';
+        let it = new $C.Combination('bathe', 3);
+        document.getElementById('text').style.color = 'red';
+        document.getElementById('text').style.wordSpacing = '2.6rem';
+        for (let i = 0; i < [...it].length; i++) {
+            document.getElementById('text').innerHTML += `${[...it][i].join('')}<br>`
+        }
+    </script>
+</body>
+
+</html>

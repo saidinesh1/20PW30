@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_12</title>
+</head>
+
+<body>
+    StringToSearch = <input type="text" id="input"><br>
+    subStr = <input type="text" id="subStr"><br>
+    posi = <input type="text" id="posi"><br>
+    <button class="go">Go</button>
+    <div class="result-container">
+        String To Search :
+        <h1 class="sts"></h1>
+        <p class="result">
+        </p>
+    </div>
+    <script>
+        goBtn = document.querySelector('.go');
+        goBtn.addEventListener('click', function () {
+            stringToSearch = document.getElementById('input').value
+            subStr = document.getElementById('subStr').value
+            posi = parseInt(document.getElementById('posi').value)
+            let firstOcc = stringToSearch.indexOf(subStr)
+            let lastOcc = stringToSearch.lastIndexOf(subStr)
+            let firstOccFrom = stringToSearch.indexOf(subStr, posi)
+            let lastOccFrom = stringToSearch.indexOf(subStr, posi)
+            let sts = document.querySelector('.sts')
+            let result = document.querySelector('.result')
+
+            sts.innerHTML = stringToSearch
+            result.innerHTML = `First Occurance = ${firstOcc}.<br>
+                                Last Occurance = ${lastOcc}.<br>
+                                First Occurance from ${posi}th index = ${firstOccFrom}.<br>
+                                Last Occurance from ${posi}th index = ${lastOccFrom}.`
+
+        })
+    </script>
+</body>
+
+</html>

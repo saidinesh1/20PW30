@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_8</title>
+</head>
+
+<body>
+    a = <input type="text" id="a"><br>
+    b = <input type="text" id="b"><br>
+    c = <input type="text" id="c"><br>
+    d = <input type="text" id="d"><br>
+    e = <input type="text" id="e"><br>
+    <button id="go">Go</button>
+    <h4>The counts are:</h4>
+    <p class="result"></p>
+    <script>
+        fiveElemArray = new Array();
+        btn = document.getElementById('go')
+        btn.addEventListener("click", function () {
+            let a = parseInt(document.getElementById('a').value)
+            let b = parseInt(document.getElementById('b').value)
+            let c = parseInt(document.getElementById('c').value)
+            let d = parseInt(document.getElementById('d').value)
+            let e = parseInt(document.getElementById('e').value)
+            fiveElemArray.push(a, b, c, d, e)
+            let negCount = 0
+            let posCount = 0
+            let zeroCount = 0
+            for (let i = 0; i < fiveElemArray.length; i++) {
+                // console.log(`Before ${i}th iteration :`, negCount, zeroCount, posCount)
+                if (fiveElemArray[i] > 0) {
+                    posCount++
+                }
+                else if (fiveElemArray[i] < 0) {
+                    negCount++
+                }
+                else {
+                    zeroCount++
+                }
+                // console.log(`After ${i}th iteration :`, negCount, zeroCount, posCount)
+            }
+            document.querySelector('.result').innerHTML = `+veCount = ${posCount} | -veCount = ${negCount} | 0Count = ${zeroCount}.`
+        })
+    </script>
+</body>
+
+</html>

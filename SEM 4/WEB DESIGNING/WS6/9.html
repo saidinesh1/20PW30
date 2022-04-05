@@ -1,0 +1,38 @@
+ <style>
+.dropdown {
+	
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border:3px solid black;
+}
+.dropdown:hover .dropdown-content {
+  display: block; 
+}
+hr{
+	background:gray;
+	}
+	a:visited
+	{
+		color:blue;
+	}
+</style>
+
+<div class="dropdown">
+  <p style="background:gray; color:white; width:405px; height:40px; text-align:center; size:6; padding-top:10px; margin-bottom:0;">Menu</p>
+  <div class="dropdown-content">
+    <p style="width:400px; height:10px; text-align:center; size:6;"><b><a href="#" style="text-decoration:none;">Home</a><hr></p>
+	<p><center><a href="#" style="text-decoration:none;">News</a></center><hr></p>
+	<p><center><a href="#" style="text-decoration:none;">Articles</a></center><hr></p>
+	<p><center><a href="#" style="text-decoration:none;">Blog</a></center><hr></p>
+	<p><center><a href="#" style="text-decoration:none;">Contact</a></center></p>
+  </div>
+</div> 

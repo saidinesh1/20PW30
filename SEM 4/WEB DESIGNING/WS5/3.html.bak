@@ -1,0 +1,43 @@
+<html>
+<head>
+	<style>
+		.rep{
+			background-image:url(gc.jpg);
+			background-repeat:repeat;
+			background-height:150px;
+			}
+		.repx{
+			background-image:url(c.jpg);
+			background-repeat:repeat-x;
+			background-height:150px;
+			}
+			.repy{
+			background-image:url(gc.jpg);
+			background-repeat:repeat-y;
+			background-height:150px;
+			}
+		.repno
+			background-image:url(gc.jpg);
+			background-repeat:no-repeat;
+			background-height:150px;
+			}
+		.repspace{
+			background-image:url(gc.jpg);
+			background-repeat:space;
+			background-height:150px;
+			}
+		.repr{
+			background-image:url(gc.jpg);
+			background-repeat:round;
+			background-height:150px;
+			}
+</style>
+<body>
+	<h1>Repeat</h1>
+	<div class="rep"></div>
+	<h1>Repeat x</h1>
+	<div class="repx"></div>
+	<h1>Repeat y</h1>
+	<div class="repy"></div>
+</body>
+</html>

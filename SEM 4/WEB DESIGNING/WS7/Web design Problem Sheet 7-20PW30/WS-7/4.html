@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS8_4</title>
+</head>
+
+<body>
+    <script>
+        x1 = prompt("Enter x1", "x1")
+        x2 = prompt("Enter x2", "x2")
+        y1 = prompt("Enter y1", "y1")
+        y2 = prompt("Enter y2", "y2")
+        function distance() {
+            let distance = Math.pow(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2), 1 / 2);
+            alert(`distance = ${distance}`)
+        }
+        distance()
+    </script>
+</body>
+
+</html>

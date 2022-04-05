@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_7</title>
+</head>
+
+<body>
+    a = <input type="text" id="a">
+    b = <input type="text" id="b">
+    c = <input type="text" id="c">
+    <button id="go">Go</button>
+    <script>
+        btn = document.getElementById('go')
+        btn.addEventListener("click", function () {
+            let a = parseInt(document.getElementById('a').value)
+            let b = parseInt(document.getElementById('b').value)
+            let c = parseInt(document.getElementById('c').value)
+            alert(`The sum is ${(a + b + c)}, the average is ${(a + b + c) / 3}, the product is ${a * b * c}, the min is ${Math.min(a, b, c)} and the max is ${Math.max(a, b, c)}.`)
+        })
+    </script>
+</body>
+
+</html>

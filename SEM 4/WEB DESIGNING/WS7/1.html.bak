@@ -1,0 +1,6 @@
+<html>
+<body>
+	<p>The current date and time is :<span id="date-time"></span>.</p>
+</body>
+<script src="1.js"></script>
+</html>

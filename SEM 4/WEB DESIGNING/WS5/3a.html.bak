@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        font-family: cursive;
+    }
+    .rep {
+        height: 140px;
+        background-image: url("gc.jpg");
+        background-repeat: repeat;
+        background-size: 300px;
+    }
+ 
+    .repx {
+        height: 140px;
+        background-image: url("gc.jpg");
+        background-repeat: repeat-x;
+        background-size: 300px;
+    }
+ 
+    .repy {
+        height: 1000px;
+        background-image: url("gc.jpg");
+        background-repeat: repeat-y;
+        background-size: 300px;
+    }
+    .norep {
+		position:relative;
+		left:400px;
+        height: 140px;
+        background-image: url("gc.jpg");
+        background-repeat: no-repeat;
+        background-size: 300px;
+    }
+    .space {
+        height: 140px;
+        background-image: url("gc.jpg");
+        background-repeat: space;
+        background-size: 300px;
+    }
+ 
+    .round {
+        height: 140px;
+        background-image: url("gc.jpg");
+        background-repeat: round;
+        background-size: 300px;
+    }
+   
+</style>
+ 
+<body>
+    <h1>repeat</h1>
+    <div class="rep">
+         
+    </div>
+    <h1>repeat Xaxis</h1>
+    <div class="repx"></div>
+    <h1> repeat yaxis</h1>
+    <div class="repy"></div>
+    <h1> no repeat</h1>
+    <div class="norep"></div>
+    <h1>space</h1>
+    <div class="space"></div>
+    <h1>round</h1>
+    <div class="round"></div>
+</body>
+ 
+</html>

@@ -1,0 +1,35 @@
+<html>
+<title>
+	simple interest
+</title>
+	<body>
+		<h3>SIMPLE INTEREST CALCULATION</h3>
+		<label>Enter the principal amount</label>
+		<input type="text" id="p"><br><br>
+		<label>Enter the rate of interest</label>
+		<input type="text" id="r"><br><br>
+		<label>Enter the no of years</label>
+		<input type="text" id="n"><br><br>
+		<p id="answer">The calculated simple interest is : </p>
+	</body>
+	<script>
+		function si()
+		{
+			let principal=prompt("Enter the principal amount ");
+			let rate=prompt("Enter the rate of interest");
+			let no_of_years=prompt("Enter the no of years");
+			let si=parseFloat(principal)*parseFloat(rate)*parseFloat(no_of_years)/100;
+			alert(si);
+		}
+		si()
+		function ci()
+		{
+			let principal=prompt("Enter the principal amount ");
+			let rate=prompt("Enter the rate of interest");
+			let no_of_years=prompt("Enter the no of years");
+			let ci=parseFloat(principal)*((1+parseFloat(rate)/100)**parseFloat(no_of_years));
+			alert(ci-principal);
+		}
+		ci();
+	</script>
+</html>

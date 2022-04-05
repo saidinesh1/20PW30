@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<h1>Check whether a number is palindrome or not</h1>
+		Enter a number = <input type="text" id="no">
+		<button id="check">check</button>
+		<p id="result"></p>
+		<script>
+			btn=document.getElementById('check')
+			btn.addEventListener("click",function(){
+				let number=document.getElementById('no').value
+				if (number<10000 || number>99999)
+					{
+						alert("Enter a five digit number")
+					}
+				else
+					{
+						let revno=number.split('').reverse().join('')
+						if(revno==number)
+							{
+								document.getElementById('result').innerHTML='YES'
+							}
+						else
+							{
+								document.getElementById('result').innerHTML='NO'
+							}
+					}
+				})
+			</script>
+		</body>
+</html>
+						

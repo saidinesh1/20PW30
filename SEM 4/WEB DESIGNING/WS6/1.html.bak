@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style6.css">
+	</head>
+	<style>
+		.a{
+			width:49%;
+			float:left;
+			background-color:#ECECEC;
+			border:3px solid black;
+			border-style:dashed;
+			}
+		.b{
+			background-color:#ECECEC;
+			width:49%;
+			float:right;
+			border:3px solid black;
+			}
+	</style>
+	<body>
+			<h1><center>INDIAN BASKETBALL TEAM</center></h1>
+			<p class="a">The India men's national basketball team represents India in international men's basketball. It is controlled by Basketball Federation of India.[3] The team made significant improvements as the sports of basketball is becoming more popular.
+A 1936 founding member of FIBA Asia,[5] India has one of Asia's longest basketball traditions. Throughout its history, Team India qualified for the FIBA Asia Championship 25 times and is placed in the top-5 in appearances in this tournament. Further, India's basketball team won four gold medals and one silver medal at the South Asian Games and became the most successful team in South Asian region. India have also won the SABA Championship five times.[6] Team India celebrated its victory at the 2014 Lusofonia Games after they finished the tournament with a 4–0 record as they beat 11-time African Champions Angola in the final.[7]
+
+Its most famous moment came at the 2014 FIBA Asia Cup with the win against home favorites and most successful Asian team China by 7 points.[3][8] This win has been labelled as the "biggest basketball win in the nation's history.</p>
+			<p class="b">Plagued by a lack of popularity and support for basketball at home, at times, India faded into oblivion and only had a handful of successful performances. Its most noteworthy tournament appearance was at the 1980 Summer Olympics when the team got its chance to represent Asia due to the cancellations of some teams who took part in the American-led boycott of the 1980 Summer Olympics. A few of the world's top basketball powers at that time (such as the United States and Canada) withdrew from the tournament. India finished 12th out of 12 in the Olympics after getting knocked out in the Preliminary Round by losing all three of their matches and then losing all five of their matches in the Classification round.
+
+While the results did not go India's way one game in particular caught the attention of basketball fans worldwide. India played against the Australian Team, one of the world's top basketball teams. India, which was made up solely of voluntary basketball players competed against the elite team of Australia for almost the whole game until it finally ceded to the Boomers 75-93 after leading at halftime 41–37.[12]
+
+Many Indian players also made headlines while in the Soviet Union as well. Ajmer Singh gained worldwide attention as he was amongst the top 10 shooters there and became the 10th best pivot player in the tournament there.[13]</p>
+		
+	</body>
+</html>

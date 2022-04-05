@@ -1,0 +1,76 @@
+<html>
+<style>
+    th,td {
+        height:30px;
+        width:800px;
+    }
+</style>
+<body bgcolor="lightblue">
+<h1 align="center">LEAVE ENTRY FORM</h1>
+<table align="center">
+    <tr bgcolor="pink">
+        <td colspan="2"><label for="rollno">Roll No:</label></td>
+        <td align="center" colspan="2"><input type="text" name="rollno"></td>
+    </tr>
+
+    <tr bgcolor="pink">
+        <td colspan="2"><label for="name">Name:</label></td>
+        <td align="center" colspan="2"><input type="text" name="name"></td>
+    </tr>
+    <tr bgcolor="pink">
+        <td colspan="2"><label for="prog">Course:</label></td>
+        <td align="center" colspan="2"><input type="text" name="prog"></td>
+    </tr>
+    <tr style="height:30px;"></tr>
+    <tr bgcolor="pink">
+        <td style="width:100;"><label for="st">Start date:</label></td>
+        <td align="center" style="width:100;"><input type="date" name="st" required pattern="\d{4}-\d{2}-\d{2}"><span class="validity"></span></td>
+        <td style="width:100;"><label for="end">End date:</label></td>
+        <td align="center" style="width:100;"><input type="date" name="end" required pattern="\d{4}-\d{2}-\d{2}"><span class="validity"></span></td>
+    </tr>
+    <tr bgcolor="pink">
+        <td colspan="2"><label for="leave">Leave type:</label></td>
+        <td align="center" colspan="2"><Select style="width:150px;" name="email">
+        <option value="Leave">Leave</option>
+        <option value="Medication">Medication</option>
+        <option value="Exemption">Exemption</option>
+        </select></td>
+    </tr>
+    <tr bgcolor="pink">
+        <td colspan="2"><label for="reason">Reason:</label></td>
+        <td align="center" colspan="2"><input type="text" name="reason"></td>
+    </tr>
+</table>
+<br>
+<br>
+<table align="center">
+    <tr bgcolor="pink">
+        <td colspan="2" style="text-align:right;"><label for="daytype">Day type:</label></td>
+        <td colspan="2"><Select style="width:150px;" name="email">
+        <option value="Half day">Half day</option>
+            <option value="Full day">Full day</option>
+        <option value="Continous day">Contionous day</option>
+</select></td>
+    </tr>
+    <tr style="height:30px;" bgcolor="lightblue"></tr>
+    <tr bgcolor="pink">
+        <td style="width:100;text-align:right;"><label for="date">Date:</label></td>
+        <td style="width:100;"><input type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}"><span class="validity"></span></td>
+        <td style="width:100;text-align:right;"><label for="session">Session:</label></td>
+        <td style="width:100;"><Select style="width:150px;" name="session">
+        <option value="Forenoon">Forenoon</option>
+        <option value="Afternoon">Afternoon</option>
+        </select></td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<table align="center" bgcolor="pink">
+    <tr>
+        <td style="text-align:right;"><button style="border:none;">Apply</button></td>
+        <td><button style="border:none;">Clear</button></td>
+    </tr>
+</table>
+</body>
+</html>

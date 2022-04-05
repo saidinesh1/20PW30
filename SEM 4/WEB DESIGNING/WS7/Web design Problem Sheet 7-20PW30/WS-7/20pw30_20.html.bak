@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+
+<body>
+	<h1>Check whether a number is palindrome or not</h1>
+	
+    
+    <p id="result"></p>
+    <script>
+            let a = prompt('Enter a five digit number')
+			let revno=a.split('').reverse().join('')
+            if (a==revno) {
+                document.getElementById('result').innerHTML = 'YES'
+            }
+            else {
+                document.getElementById('result').innerHTML = 'NO'
+            }
+
+    </script>
+</body>
+
+</html>

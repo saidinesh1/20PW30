@@ -1,0 +1,14 @@
+<html>
+<head>
+	<style>
+		.bimg{
+			background-image:url(gc.jpg);
+			background-repeat:repeat-x;
+			background-repeat:repeat-y;
+			height:200px;
+			width:200px;
+			}
+	</style>
+</head>
+<div class="bimg"></div>
+</html>

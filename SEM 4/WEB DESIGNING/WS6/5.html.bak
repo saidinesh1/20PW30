@@ -1,0 +1,36 @@
+<html>
+	<style>
+	.a{
+		width:100px;
+		height:100px;
+		border-radius:10px;
+		border:3px solid black;
+		background:#FD5D5D;
+		}
+	.b{
+	    width:100px;
+		height:100px;
+		border-radius:50px;
+		border:3px solid black;
+		background:#46244C;
+		}
+	.c{
+		width:100px;
+		height:100px;
+		border-radius:100px;
+		border:3px solid black;
+		background:#97DBAE;
+		}
+	</style>
+	<body>
+		<div class="a">
+			<p style="position:relative;"><font size="4">Border-Radius:10px</font></p>
+		</div>
+		<div class="b">
+			<p style="position:relative; left:10px; "><font size="4">Border radius:50px</font></p>
+		</div>
+		<div class="c">
+			<p><font size="4">Border radius:100px</font></p>
+		</div>
+	</body>
+</html>

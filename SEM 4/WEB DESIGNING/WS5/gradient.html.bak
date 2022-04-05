@@ -1,0 +1,10 @@
+<html>
+	<style>
+		#A{
+			background-image:linear-gradient(to bottom right,white,black);
+			}
+	</style>
+<body>
+	<div id="A"></div>
+	</body>
+</html>

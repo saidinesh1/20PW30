@@ -1,0 +1,31 @@
+<html>
+	<title>
+		Conversion of temperature
+	</title>
+	<body>
+		<form>
+			<label>Enter the temperature in celsius: </label>
+			<input type="number" id="tempcel"></input>
+			<button type="button" onclick="convert_cel_to_fah()"></button><p id="celcius">In Fahrenheit :</p>
+			<br><br>
+			<label>Enter the temperature in Fahrenheit : </label>
+			<input type="number" id="tempfah"</input>
+			<button type="button" onclick="convert_fah_to_cel()"></button><p>In celcius : <span id="fahrenheit"></span></p>
+			
+		</form>
+	</body>
+	<script>
+		function convert_cel_to_fah()
+		{
+		let cel=document.getElementById('tempcel').value;
+		let confah=parseFloat(cel)*9/5+32;
+		document.getElementById('celcius').innerHTML+=confah;
+		}
+		function convert_fah_to_cel()
+		{
+		let fah=document.getElementById('tempfah').value;
+		let concel=(parseFloat(fah)-32)*5/9;
+		document.getElementById('fahrenheit').innerHTML+=concel;
+		}
+	</script>
+</html>

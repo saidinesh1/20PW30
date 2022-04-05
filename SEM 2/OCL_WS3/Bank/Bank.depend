@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1615615736 source:z:\ocl_ws3\bank\bank1.cpp
+	<iostream>
+	"Bank.h"
+
+1615615801 z:\ocl_ws3\bank\bank.h
+
+1615616184 source:z:\ocl_ws3\bank\main.cpp
+	<iostream>
+	"Bank.h"
+
+1615616154 source:z:\ocl_ws3\bank\bank.cpp
+	"Bank.h"
+	<iostream>
+

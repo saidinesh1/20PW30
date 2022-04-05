@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_18</title>
+</head>
+
+<body>
+
+    <h1 class="result">
+        Encrypted integer:
+    </h1>
+    <script>
+        let int = window.prompt("Enter an four-digit integer: ");
+        let digits = int.toString(10).split('').map(Number);
+
+        for (let i = 0; i < digits.length; i++) {
+            digits[i] = (digits[i] + 7) % 10;
+        }
+
+        let temp = digits[0];
+        digits[0] = digits[2];
+        digits[2] = temp;
+        temp = digits[1];
+        digits[1] = digits[3];
+        digits[3] = temp;
+
+        document.querySelector('.result').innerHTML += `${digits.join('')}.<br>`
+    </script>
+</body>
+
+</html>

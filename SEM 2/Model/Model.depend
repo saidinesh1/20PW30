@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1615353347 source:z:\model\main.cpp
+	<iostream>
+	"Model.h"
+
+1615353068 z:\model\model.h
+
+1615353282 source:z:\model\model.cpp
+	<iostream>
+	"Model.h"
+

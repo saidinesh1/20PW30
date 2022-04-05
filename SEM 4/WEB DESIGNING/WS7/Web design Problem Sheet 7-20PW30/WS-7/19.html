@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_19</title>
+</head>
+
+<body>
+    <h1 class="result">
+
+    </h1>
+    <script>
+        let noOfVal = prompt("Enter the number of values you're going to enter: ", "")
+        listOfVal = []
+        for (let i = 0; i < noOfVal; i++) {
+            listOfVal.push(parseInt(prompt("Enter the value", "")))
+        }
+        let minVal = 999999
+        for (let i = 0; i < listOfVal.length; i++) {
+            if (listOfVal[i] < minVal) {
+                minVal = listOfVal[i]
+            }
+        }
+        document.querySelector('.result').innerHTML = `The min of the entered values are ${minVal}.`
+    </script>
+</body>
+
+</html>

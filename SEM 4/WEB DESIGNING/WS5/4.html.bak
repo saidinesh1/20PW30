@@ -1,0 +1,27 @@
+<html>
+<head>
+	<style>
+		.A{
+			background-image:url("IF.jpg");
+			background-repeat:no-repeat;
+			height:1000px;
+			width:1500px;
+		   }
+		   .A-txt{
+		    position:relative;
+			left:100px;
+			top:200px;
+			color:red;
+			font-family:cursive;
+			font-weight:3;
+			font-size:40;
+			}
+		
+	</style>
+</head>
+<body>
+	<div class="A">
+		<div class="A-txt">Our Indian flag doesnt fly by the wind but by the breath of every soldiers</div>
+	</div>
+</body>
+</html>

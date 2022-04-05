@@ -1,0 +1,5 @@
+syms x n;
+f=x+x^2;
+a0=1/pi*int(f,-pi,pi);
+an=simplify(1/pi*int(f*cos(n*x),-pi,pi))
+bn=simplify(1/pi*int(f*sin(n*x),-pi,pi))

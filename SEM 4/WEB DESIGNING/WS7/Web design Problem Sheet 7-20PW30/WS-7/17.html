@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_17</title>
+</head>
+
+<body>
+    <h1 class="result"></h1>
+    <script>
+        empRate = [20, 40, 10]
+        empHours = [40, 60, 30]
+        let payEarned = 0
+        for (let i = 0; i < empRate.length; i++) {
+            let tempHours = empHours[i]
+            if (tempHours <= 40) {
+                payEarned += tempHours * empRate[i]
+            }
+            else {
+                payEarned += 40 * empRate[i]
+                payEarned += (tempHours - 40) * empRate[i] / 2
+            }
+            document.querySelector('.result').innerHTML += `Total pay for Employee${i + 1} = ${payEarned}.<br>`
+            payEarned = 0
+        }
+    </script>
+</body>
+
+</html>

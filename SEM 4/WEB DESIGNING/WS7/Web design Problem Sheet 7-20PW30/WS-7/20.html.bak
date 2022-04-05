@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS7_20</title>
+</head>
+
+<body>
+    <h1>Iis the entered value a palindrome?</h1>
+    <h1 class="result"></h1>
+    <script>
+        let no = prompt('Please enter a five digit number: ', "")
+        if (no < 10000 || no > 99999) {
+            alert("Invalid number. Please reload and enter a 5-digit no.")
+        }
+        else {
+            let revNo = no.split("").reverse().join("")
+            if (revNo == no) {
+                document.querySelector('.result').innerHTML = "YES"
+            }
+            else {
+                document.querySelector('.result').innerHTML = "NO"
+            }
+        }
+    </script>
+</body>
+
+</html>

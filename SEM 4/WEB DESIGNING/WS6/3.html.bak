@@ -1,0 +1,64 @@
+<html>
+	<style>
+		h1{
+			margin:0;
+			background-color:blue;
+			font-size:36;
+			color:white;
+			position:relative;
+			text-align:center;
+		   }
+		.a{
+			height:70px;
+			width:33.15%;
+			margin:0;
+			background-color:red;
+			color:black;
+			position:relative;
+			font-size:16;
+			display:inline-block;
+			margin-right:0;
+		}
+		.b{
+			margin:0;
+			margin-right:0;
+			background-color:white;
+			color:black;
+			height:70px;
+			width:33.15%;
+			position:relative;
+			font-size:16;
+			display:inline-block;
+			}
+		.c{
+			margin:0;
+			background-color:green;
+			color:black;
+			height:70px;
+			width:33.15%;
+			position:relative;
+			font-size:16;
+			display:inline-block;
+		  }
+		  div{
+		  overflow-x:hidden; 
+		  overflow-y:
+		  }
+		  .r{
+			height:10000px;
+			background-color:gray;
+			}
+		  
+	</style>
+<body>
+<div>
+	<h1>THIS IS THE HEADER OF THE WEB PAGE</h1>
+	<p class="a">THIS IS LEFT PAGE.THIS IS LEFT PAGE.THIS IS LEFT PAGE.</p>
+	<p class="b">THIS IS centre PAGE.THIS IS centre PAGE.THIS IS centre PAGE.</p>
+	<p class="c">THIS IS RIGHT BLOCK.THIS IS RIGHT BLOCK.THIS IS RIGHT BLOCK.</p>
+</div>
+<div class="r">
+</div>
+</body>
+	
+			
