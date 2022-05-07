@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<button id="go">Start Timer</button>
+		<p class="timer"></p>
+	</body>
+	<script>
+		x=document.querySelector(".timer");
+		btn=document.getElementById("go");
+		x.innerHTML="starts now";
+		btn.addEventListener("click",function(){
+			setTimeout(()=>{
+				x.innerHTML="10"
+					setTimeout(()=>{
+						x.innerHTML="9"
+								setTimeout(()=>
+										{
+											x.innerHTML="8"
+										},1000)
+			},1000)
+			},1000)
+			},1000)
+			
+	</script>
+</html>

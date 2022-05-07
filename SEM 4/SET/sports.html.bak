@@ -1,0 +1,20 @@
+<html>
+<style>
+	.topname{
+		background-color:#0bb1d6;
+		height:120px;
+		width:100%;
+		
+	}
+	body{
+		background-image: url('logo.jpg.jpg');
+		repeat:none;
+		}
+</style>
+<body>
+		<div class="topname">
+		
+		
+		</div>
+</body>
+</html>

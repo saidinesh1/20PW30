@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p>Timer : <output id="time"></output></p>
+		<button onclick="start()">Start Timer</button>
+		<button onclick="stop()">Stop Timer</button>
+	
+	<script>
+		var w;
+		function start(){
+		if(typeof(Worker)!=="undefined"){
+			if(typeof(w)=="undefined")
+			{
+				w=new Worker("timer.js");
+			}
+			w.onmessage=function(event){
+				document.getElementById("time").innerHTML=event.data;
+			}
+			}
+			else{
+				document.getElementById("time").innerHTML="sorry! No web worker is supported";
+				}
+			}
+			function stop(){
+				w.terminate();
+				w=undefined;
+			}
+	</script>
+	</body>
+</html>
+	
+		

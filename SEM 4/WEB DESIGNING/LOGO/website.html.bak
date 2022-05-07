@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .logo{
+		height:200px;
+		width:200px;
+		padding-top:25px;
+		padding-left:20px;
+		}
+		
+	.titlename{
+		position:relative;
+		bottom:50px;
+		left:270px;
+		font-weight:3;
+		text-align:center;
+		font-family: 'Rubik Moonrocks', cursive;
+		font-size:100px;
+		color:#533535;
+		}
+	.belowtitle{
+		position:absolute;
+		bottom:550px;
+		left:700px;
+		font-family: 'Rubik Moonrocks', cursive;
+		font-size:40px;
+		color:#533535;
+		}
+	.searchbox{
+		position:absolute;
+		left:1000px;
+		}
+	.topdisplay{
+		display:flex;
+		background-color:#FFEEAD;
+		border:2px solid black;
+		border-radius:25px;
+		}
+	.displaytoys{
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: .3s ease-in-out;
+		transition: .3s ease-in-out;
+		height:190px;
+		width:190px;
+		padding-left:10px;
+		}
+			.displaytoys:hover{
+			-webkit-transform: scale(1);
+			transform: scale(1.3);
+	}
+	.contentdisplay{
+		background-color:#EEEBDD;
+		margin-top:20px;
+		border:2px solid black;
+		border-radius:25px;
+		padding:10px;
+		}
+	.displaydes{
+			padding:10px;
+			font-weight1.5;
+		}
+	.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  position:relative;
+  left:1000px;
+	border-radius:25px;
+	padding:20px;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+   position:relative;
+   left:1000px;
+   border-radius:25px;
+}
+.fa-instagram{
+	background:#55ACEE;
+	color:white;
+	position:relative;
+   left:1000px;
+   border-radius:25px;
+   }
+</style>
+<body>
+	<div class="topdisplay">
+		<img class="logo" src="Z:\SEM 4\WEB DESIGNING\LOGO\logo.jpg">
+		<div><h1 class="titlename">BOMMAI KUDIL</h1></input><br><h3 class="belowtitle">A world of toys</h3>
+		<div><a href="#" class="fa fa-facebook"></a><a href="#" class="fa fa-twitter"></a><a href="#" class="fa fa-instagram"></a></div>
+		</div>
+	</div>
+	<div class="contentdisplay">
+		<table style="border-color:#2F86A6; border-collapse:collapse;">
+			<tr colspan="8">
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy1.jpg"></img></td>
+			 <td class="displaydes">Teddy bear with other toys<br>comes in a whole pack<br>MRP 500 Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy2.jpg"></img></td>
+			 <td class="displaydes"> Remote Control Car with <br>rechargable battery<br>MRP 1000Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy3.jpg"></td>
+			 <td class="displaydes">Remote control Airplane with <br> long life battery <br> MRP 2000Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy4.jpg"></img></td>
+			  <td class="displaydes">Remote control Tank with <br> long life battery <br> MRP 2000Rs</td>
+			</tr>
+			<tr style="padding-top:10px;" colspan="8">
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy1.jpg"></img></td>
+			 <td class="displaydes">Teddy bear with other toys<br>comes in a whole pack<br>MRP 500 Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy2.jpg"></img></td>
+			 <td class="displaydes"> Remote Control Car with <br>rechargable battery<br>MRP 1000Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy3.jpg"></td>
+			 <td class="displaydes">Remote control Airplane with <br> long life battery <br> MRP 2000Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy4.jpg"></img></td>
+			  <td class="displaydes">Remote control Tank with <br> long life battery <br> MRP 2000Rs</td>
+			</tr>
+			<tr style="padding-top:10px;" colspan="8">
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy1.jpg"></img></td>
+			 <td class="displaydes">Teddy bear with other toys<br>comes in a whole pack<br>MRP 500 Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy2.jpg"></img></td>
+			 <td class="displaydes"> Remote Control Car with <br>rechargable battery<br>MRP 1000Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy3.jpg"></td>
+			 <td class="displaydes">Remote control Airplane with <br> long life battery <br> MRP 2000Rs</td>
+			 <td><img class="displaytoys" src="Z:\SEM 4\WEB DESIGNING\LOGO\toy4.jpg"></img></td>
+			  <td class="displaydes">Remote control Tank with <br> long life battery <br> MRP 2000Rs</td>
+			</tr>
+		</table>
+			 
+			
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 id="arr"></h2>
+    <h2 id="sort"></h2>
+    <script>
+        let arr = [];
+        let n = prompt("Enter size of array: ");
+        for(let i=0; i<n; i++){
+            arr[i]=prompt("Enter "+i+" th element: ");
+        }
+        document.getElementById("arr").innerHTML="Array: "+arr;
+        let factor = Math.floor(n/1.3);
+        while(factor>=1) {
+            for(let i=0; i+factor<n; i++){
+                if(arr[i]>arr[i+factor])
+                {
+                    let temp=arr[i];
+                    arr[i]=arr[i+factor];
+                    arr[i+factor]=temp;
+                }
+            }
+            factor=Math.floor(factor/1.3);
+        }
+        document.getElementById("sort").innerHTML="Sorted array: "+arr;
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+	<head>
+		
+			Enter the text here = <input type="text" id="string">
+			<button id="go">Check here</button><br>
+			<p class="result"></p>
+		
+	</head>
+	<script>
+		btn=document.getElementById("go")
+		result=document.querySelector(".result")
+		btn.addEventListener("click",function(){
+		let a=document.getElementById("string").value
+		if(a.charAt(0)===a.charAt(0).toUpperCase())
+			result.innerHTML="First letter is capitalised"
+		else
+			result.innerHTML="First letter is not capitalised"
+		})
+	</script>
+</html>

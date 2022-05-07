@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<button id="go" onclick="getlocation()">click here </button>
+		<p class="result"></p>
+	</head>
+	<script>
+	var x=document.getquerySelector(".result")
+		function getlocation()
+		{
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosiition(showPosition)
+				}
+				else
+				{
+					alert("sorry!your browser is not supporting")
+				}
+		}
+		function showPosition(position){  
+		var x = "Your current location is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " +    position.coords.longitude + ")";  
+                document.getElementById("location").innerHTML = x;  
+       } 	
+	</script>
+</html>
