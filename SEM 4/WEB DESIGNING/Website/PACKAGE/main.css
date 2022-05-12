@@ -44,7 +44,8 @@ p{
 }
 body{
     width:100%;
-    background:#EDE6DB;
+    background: rgb(232,237,237);
+    background: linear-gradient(90deg, rgba(232,237,237,1) 5%, rgba(0,172,176,0.7959383582534576) 100%, rgba(254,94,76,1) 100%); 
 }
 /*header*/
 #header{
@@ -226,6 +227,7 @@ body{
     padding-top:20px ;
     flex-wrap:wrap;
 }
+
 #banner{
     display:flex;
     justify-content:center;
@@ -268,8 +270,10 @@ body{
     display:flex;
     justify-content: space-between;
     flex-wrap:wrap;
+    align-items: center;
 }
 #sm-banner .banner-box1{
+    border-radius: 30px;;
     justify-content:center;
     align-items:center;
     text-align:center;
@@ -288,6 +292,7 @@ body{
     height:50vh;
     background-size: cover;
     background-position: center;
+    border-radius: 30px;
 }
 #sm-banner .banner-box1 h4{
     font-family: 'Smooch Sans', sans-serif;
@@ -298,19 +303,218 @@ body{
 #sm-banner .banner-box1 h2{
     font-family: 'Smooch Sans', sans-serif;
     font-family: 'Tapestry', cursive;
-    background: linear-gradient(to right, red,yellow,orange,white);
+    background: rgb(42,0,89);
+    background: linear-gradient(90deg, rgba(42,0,89,1) 5%, rgba(76,9,121,0.7959383582534576) 67%, rgba(158,0,255,1) 100%); 
     -webkit-text-fill-color:transparent;
     -webkit-background-clip: text;
-    font-size:40px;
+    font-size:80px;
+    position:relative;
+    bottom:70px;
 }
-.banner-box button{
-    background:white;
+.banner-box1 button{
+    
     width:140px;
     height:40px;
     font-size:30px;
     border-style:none;
     border-radius:20px;
-    background:linear-gradient(to right,red,rgb(158, 158, 3),orange,rgb(4, 76, 124));
+    background: rgb(42,0,89);
+    background: linear-gradient(90deg, rgba(42,0,89,1) 5%, rgba(76,9,121,0.7959383582534576) 67%, rgba(158,0,255,1) 100%); 
     cursor:pointer;
     font-weight:700;
+    position:relative;
+    bottom:60px;
+    color:white;
+    font-weight:700;
+}
+.banner-box2 h4{
+    color:white;
+    position:relative;
+    top:10px;
+    font-size:75px;
+    right:0px;
+    left:50px;
+}
+.banner-box2 h2{
+    color:white;
+    position:relative;
+    top:30px;
+}
+.banner-box2 button{
+    width:140px;
+    height:40px;
+    font-size:30px;
+    border-style:none;
+    border-radius:20px;
+    cursor: pointer; 
+    font-weight:700;
+    position:relative;
+    top:45px;
+}
+.banner-box1 button:hover{
+    background:darkgrey;
+    color:black;
+}
+#sm-banner .banner-box3{
+    border-radius: 30px;;
+    top:50px;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-image: url("IMAGES/smban3.jpg");
+    min-width:660px;
+    height:50vh;
+    background-position: left;
+    height:50vh;
+    width:100%;
+    background-repeat: none;
+    border-radius: 30px;
+}
+.banner-box3 h4{
+    position:relative;
+    right:0px;
+    top:120px;
+    color: #333;
+    font-family: tahoma;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 550px;
+}
+.banner-box3 h4 span{
+    font-size:40px;
+    margin-left:40px;
+}
+.message{
+  background-color: yellow;
+  color: #333;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  position: absolute;
+  padding-left: 0.5rem;
+  top: 20px;
+  left: 100px;
+  animation: openclose 6s ease-in-out infinite;
+}
+
+.word1, .word2, .word3, .word4{
+    font-family: tahoma;
+  }
+  
+  @keyframes openclose {
+    0% {
+      top: 0.2rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 300px;
+    }
+    30% {
+      top: 0.2rem;
+      width: 300px;
+    }
+    33% {
+      top: 0.2rem;
+      width: 30px;
+    }
+    35% {
+      top: 0.2rem;
+      width: 0;
+    }
+    38% {
+      top: -4.5rem;
+      
+    }
+    48% {
+      top: -4.5rem;
+      width: 300px;
+    }
+    62% {
+      top: -4.5rem;
+      width: 190px;
+    }
+    66% {
+      top: -4.5rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    86% {
+      top: -9rem;
+      width: 285px;
+    }
+    95% {
+      top: -9rem;
+      width: 300px;
+    }
+    98% {
+      top: -9rem;
+      width: 30px;
+      text-indent: 5px;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+#newsletter{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-items: center;
+    background-image: url("IMAGES/b14.png");
+    background-repeat:no-repeat;
+    background-position: 20% 30%;
+    background-color:#041e42 ;
+}
+#newsletter h4{
+    font-size:70px;
+    font-weight:700;
+    color:#fff;
+}
+#newsletter h2{
+    font-size:40px;
+    font-weight:600;
+    color:#818ea0;
+}
+#newsletter h2 span{
+    color:#ffbd27;
+}
+#newsletter input{
+    height:3.125rem;
+    padding:0 1.25em;
+    font-size:32px;
+    width:100%;
+    border:1px solid transparent;
+    border-radius:4px;
+    outline:none;
+    font-weight: 700;
+}
+#newsletter .signup{
+    border-radius: 4px;;
+    background-color:#088178;
+    color:#fff;
+    white-space:nowrap;
+    height:3.125rem;
+    width:100px;
+    position:relative;
+    right:140px;
+    font-size:32px;
+}
+#newsletter .form{
+    display:flex;
+    width:40%;
 }
