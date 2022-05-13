@@ -1,0 +1,9 @@
+library(lpSolve)
+f.obj<-c(68.8,68)
+f.con<-matrix(c(1,0,
+		    0,1,
+		    8,6),nrow=3,byrow=TRUE)
+f.dir<-c("<=","<=",">=")
+f.rhs<-c(9,11,50)
+lp("min",f.obj,f.con,f.dir,f.rhs)
+lp("min",f.obj,f.con,f.dir,f.rhs)$solution

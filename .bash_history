@@ -15,3 +15,10 @@ git force push
 git push
 git pull
 git pull
+git pull
+git status
+git add .
+git commit -m "MAY 12"
+git push
+git status
+git pull
