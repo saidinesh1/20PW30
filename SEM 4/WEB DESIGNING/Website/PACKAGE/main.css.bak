@@ -44,7 +44,7 @@ p{
 }
 body{
     width:100%;
-    background:linear-gradient(to right,#FF6363,#CDDEFF,#F5F5F5,#6998AB);
+    background:#EDE6DB;
 }
 /*header*/
 #header{
