@@ -22,3 +22,7 @@ git commit -m "MAY 12"
 git push
 git status
 git pull
+git add .
+git commit -m "MAY 13"
+git push
+git status
