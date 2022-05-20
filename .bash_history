@@ -26,3 +26,13 @@ git add .
 git commit -m "MAY 13"
 git push
 git status
+git status
+git add .
+git commit "-m" "May 14"
+git push
+git status
+git commit -m "May 20"
+git push
+git status
+git commit -m "May 20"
+git push

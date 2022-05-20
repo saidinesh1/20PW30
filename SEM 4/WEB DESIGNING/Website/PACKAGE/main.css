@@ -44,12 +44,10 @@ p{
 }
 body{
     width:100%;
-<<<<<<< HEAD
-    background:linear-gradient(to right,#FF6363,#CDDEFF,#F5F5F5,#6998AB);
-=======
-    background: rgb(232,237,237);
-    background: linear-gradient(90deg, rgba(232,237,237,1) 5%, rgba(0,172,176,0.7959383582534576) 100%, rgba(254,94,76,1) 100%); 
->>>>>>> 5dfabe65beb019b6a968b75d7b9a91c0f9376f9c
+
+    
+    background: #96CEB4;
+
 }
 /*header*/
 #header{
