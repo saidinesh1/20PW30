@@ -1,0 +1,49 @@
+
+.container{
+    
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.container button{
+    font-size:30px;
+}
+.pizza{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+    height:10px;
+    width:1400px;
+    padding:30px;
+    position:relative;
+}
+.pizza .cart{
+    display:flex;
+    flex-wrap:wrap;
+    padding:5px;
+    width:35px;
+    font-size:35px;
+    position:absolute;
+    left:180px;
+    top:250px;
+    border-radius: 20px;
+    border:2px;
+}
+.submitform{
+    position:absolute;
+    top:600px;
+    display:flex;
+    right:50%;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+.details{
+    position:absolute;
+    top:750px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom: 40px;
+}
