@@ -9,6 +9,6 @@ var_solution<-lp("max",f.obj,f.con,f.dir,f.rhs)$solution
 opt<-optimum$objval
 cat("Optimum value is ",opt)
 cat("variables final value is ",var_solution[1],var_solution[2])
-dcons<-lp("max",f.obj,f.con,f.dir,f.rhs,compute.sens=TRUE)$duals
-cat("Dual values are \n",dcons[1],"\n",dcons[2])
-		    
+lp("max",f.obj,f.con,f.dir,f.rhs,compute.sens=TRUE)$duals
+
+		     
