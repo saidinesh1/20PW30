@@ -39,3 +39,7 @@ git push
 git status
 git commit -m "May 20"
 git push
+git add .
+git status
+git add .
+git add

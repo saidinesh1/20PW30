@@ -12,13 +12,13 @@ data = {
       },
       "To": [
         {
-          "Email": "20pw24@psgtech.ac.in",
+          "Email": "20pw30@psgtech.ac.in",
           "Name": "Sai"
         }
       ],
       "Subject": "Greetings from Mailjet.",
       "TextPart": "My first Mailjet email",
-      "HTMLPart": "<h3></h3>",
+      "HTMLPart": "<h3>Kishore Is Bad Boy.</h3>",
       "CustomID": "AppGettingStartedTest"
     }
   ]

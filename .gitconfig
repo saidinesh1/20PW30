@@ -6,3 +6,5 @@
 [user]
 	name = saidinesh1
 	email = 76140435+saidinesh1@users.noreply.github.com
+[safe]
+	directory = %(prefix)///CSSERV/20PW30/
