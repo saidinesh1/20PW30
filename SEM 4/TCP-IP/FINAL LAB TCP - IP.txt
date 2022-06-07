@@ -1,0 +1,247 @@
+#HTTP server
+
+import http.server
+import os
+import socketserver
+from urllib.parse import unquote
+
+
+class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
+
+    def do_GET(self):
+        return http.server.SimpleHTTPRequestHandler.do_GET(self)
+
+    def do_POST(self):
+        path = self.translate_path(self.path)
+        length = int(self.headers['Content-Length'])
+        data = '\n'.join([
+            unquote(x)
+            for x in self.rfile.read(length).decode().split('&')[:-1]
+        ]) + '\n\n\n\n'
+        with open('db.txt', 'a+') as f:
+            f.write(data)
+        self.send_response(301)
+        
+        self.send_header('Location','localhost:8000')
+        self.end_headers()
+        return
+
+
+handler_object = MyHttpRequestHandler
+my_server = socketserver.TCPServer(('localhost', 8000), handler_object)
+my_server.serve_forever()
+________________________________________________________________________________________________________________________
+#index.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>hackermans</title>
+</head>
+
+<body>
+	<form action="/" method="post">
+		<div width="100%" class="container" align="center">
+			<h1>Register</h1>
+			<p>Please fill in this form to create an account.</p>
+			<hr>
+			<table align="center">
+				<tr>
+					<td>
+						<label for="email"><b>Email</b></label>
+					</td>
+					<td>
+						<input type="text" placeholder="Enter Email" name="email" id="email" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="password"><b>Password</b></label>
+					</td>
+					<td><input id="password" name="password" placeholder="password" type="password" required>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<input id="submitEvent" name="Submit" type="Submit" value="Submit">
+		</div>
+	</form>
+	<script>
+		const submitBtn = document.getElementById('submitEvent')
+		submitBtn.addEventListener('click',function(){
+			alert("Your data was submitted.")
+		})
+	</script>
+</body>
+
+</html>
+_______________________________________________________________________________________________________________________
+#IP-FRAGMENTATION:
+
+import math
+
+#IP DATAGRAM FRAGMENTING
+
+#given
+DATAGRAM_SIZE=1800
+MTU_ETH=1500
+MTU_WAN=572
+HEADER=20
+
+#fragmenting function
+def fragment(no_packets,MTU,HEADER,DATAGRAM_SIZE):
+    packets=[]
+    sent_bits=0
+    for i in range(0,no_packets):
+        
+        if(i!=no_packets-1):
+             packets.append(MTU-HEADER)
+             sent_bits+=MTU-HEADER
+        else:
+            packets.append(DATAGRAM_SIZE-sent_bits)
+    
+    return packets
+    
+#ethernet frags
+no_packets=math.ceil(DATAGRAM_SIZE/MTU_ETH)
+eth_frags=fragment(no_packets,MTU_ETH,HEADER,DATAGRAM_SIZE)
+print(eth_frags)
+
+#wan frags
+wan_frags=[]
+for datagram_size in eth_frags:
+    if(datagram_size>MTU_WAN):
+        temp=fragment(math.ceil(datagram_size/MTU_WAN),MTU_WAN,HEADER,datagram_size)
+        for j in temp:
+            wan_frags.append(j)
+    else:
+        wan_frags.append(datagram_size)
+
+# TL calc
+TL=[]
+for i in wan_frags:
+    TL.append(i+20)
+print(f"TL of the frags: {TL}")
+
+#mf, offset
+mf=[]
+offset=[]
+
+for i in range(0,len(wan_frags)):
+    if i==len(wan_frags)-1:
+        mf.append(0)
+    else:
+        mf.append(1)
+        
+for i in range(0,len(wan_frags)):
+    if i==0:
+        offset.append(0)
+    else:
+        offset.append(sum(wan_frags[0:i])/8)
+
+
+print(f"THe MF IS {mf}\noffset is {offset}.")
+
+----------------------------------------------------------------------------------------------------------------
+#IP fragmentation using server and client:
+
+#server.py
+
+#server
+from socket import *
+
+
+ID = '1001100010011001'
+R = '0'
+DF = '0'
+
+def fragment(datagram, mtu):
+    datagramSize = int(datagram.split('-')[-1])+20
+    offset = int(datagram.split('-')[-2])*8
+    initM =  datagram.split('-')[-3]
+    
+    if datagramSize <= mtu:
+        return [datagram]
+    
+    fragments = list()
+    
+    print('Fragmenting packet of size:', datagramSize)
+    
+    total_data_len = datagramSize-20
+    data_len = mtu-20
+    data_len = (data_len//8)*8
+    
+    M='1'
+    while total_data_len >0:
+        fragment = ID+'-'+R+'-'+DF+'-'
+        fragOff = offset//8
+        offset += data_len
+        fragment += M+'-'+ str(fragOff) + '-'+ str(data_len)
+        total_data_len -= data_len;
+        if total_data_len <= data_len:
+            M= initM
+            data_len = total_data_len
+        fragments.append(fragment)   
+    return fragments
+
+with socket(AF_INET, SOCK_STREAM) as s:
+    s.bind(('localhost', 12345))
+    s.listen(5)
+    conn, addr = s.accept()
+    with conn:
+        print(f"Connected by {addr}")
+        while True:
+            data = conn.recv(1024).decode().split(' ')
+            if data!=['']:
+                fragments=[]
+                print(data)
+                fragments.append(data[0])
+                n = int(data[1])
+                mtu = [int(x) for x in data[2:2+n]]
+                print(n, mtu)
+                
+                for i in range(len(mtu)):
+                    fragmentsCopy=[]
+                    for j in range(len(fragments)):
+                        fragmentsCopy.append(fragments[j])
+                    fragments = []
+                    for j in range(len(fragmentsCopy)):
+                        fragments += fragment(fragmentsCopy[j], mtu[i])
+                    print('Through router-'+ str(i+1) + ': ', fragments)
+                conn.sendall(','.join(fragments).encode())
+				
+
+#client.py
+
+#client
+from socket import *
+
+ID = '1001100010011001'
+R = '0'
+DF = '0'
+
+HOST = 'localhost'
+PORT = 12345
+
+psize = int(input('packetSize: '))
+rno = int(input('no of routers: '))
+mtu = list()
+for i in range(rno):
+    mtu.append(input('mtu for router'+str(i+1)+': '))
+    
+packet = ID+'-'+R+'-'+DF+'-0-0-'+str(psize-20)
+print('datagram structure: [ID-R-DF-M-OFFSET-DATALENGTH]')
+with socket(AF_INET, SOCK_STREAM) as c:
+    c.connect((HOST, PORT))
+    c.send((packet + ' ' + str(rno) +' ' + ' '.join(mtu)).encode())
+    datagrams = c.recv(8192).decode().split(',')
+    for i in datagrams:
+        print(i)
+        
+_________________________________________________________________________________________________________________________________________
+
