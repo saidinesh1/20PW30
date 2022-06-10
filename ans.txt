@@ -1,0 +1,86 @@
+---1---
+
+library(lpSolve)
+f.obj<-c(2,3)
+f.con<-matrix(c(2,3,
+		    2,6),nrow=2,byrow=TRUE)
+f.dir<-c("<=","<=")
+f.rhs<-c(8,18)
+optimum<-lp("max",f.obj,f.con,f.dir,f.rhs)
+var_solution<-lp("max",f.obj,f.con,f.dir,f.rhs)$solution
+opt<-optimum$objval
+cat("Optimum value is ",opt)
+cat("variables final value is ",var_solution[1],var_solution[2])
+dcons<-lp("max",f.obj,f.con,f.dir,f.rhs,compute.sens=TRUE)$duals
+cat("Dual values are \n",dcons[1],"\n",dcons[2])
+
+# Duals lower and upper limits
+lowerLimit<-lp("max", f.obj, f.con, f.dir, f.rhs, compute.sens=TRUE)$duals.from
+upperLimit<-lp("max", f.obj, f.con, f.dir, f.rhs, compute.sens=TRUE)$duals.to
+
+cat("Dual values Limits are :\n",lowerLimit[1]," ",lowerLimit[2])
+cat(upperLimit[1]," ",upperLimit[2])
+
+d1<-dcons[1]-.30
+
+if(f.rhs[1]+4>=lowerLimit[1]&&f.rhs[1]+4<=upperLimit[1]){
+	newopt=opt+(d1*4);
+	if(newopt>opt){
+		print("Recommended")
+	}
+	else{
+		print("Not Recommended")
+	}
+}
+
+
+-------------2------------
+
+library(lpSolve)
+f.obj<-c(8,5)
+f.con<-matrix(c(2,1,
+		    1,0,
+		    0,1),nrow=3,byrow=TRUE)
+f.dir<-c("<=","<=","<=")
+f.rhs<-c(400,150,200)
+optimum<-lp("max",f.obj,f.con,f.dir,f.rhs)
+var_solution<-lp("max",f.obj,f.con,f.dir,f.rhs)$solution
+opt<-optimum$objval
+cat("Optimum value is ",opt)
+cat("variables final value is ",var_solution[1],var_solution[2])
+
+lp("max",f.obj,f.con,f.dir,f.rhs,compute.sens=TRUE)$duals
+
+# Duals lower and upper limits
+lp("max", f.obj, f.con, f.dir, f.rhs, compute.sens=TRUE)$duals.from
+lp("max", f.obj, f.con, f.dir, f.rhs, compute.sens=TRUE)$duals.to
+
+if(f.rhs[1]-30>=lowerLimit[1]&&f.rhs[1]-30<=upperLimit[1]){
+	cat("New optimal:",opt-(30*opt$duals[1])
+}
+
+
+-----------hungarian------------
+
+library(RcppHungarian)
+a<-matrix(c(
+		80, 55, 45, 45,
+		58, 35, 70, 50,
+		70, 50, 80, 65,
+		90, 70, 40, 80
+		), nrow=4, byrow=TRUE)
+cost<-matrix(0,nrow(a),ncol(a))
+maxi<-max(a)
+for(i in 1:nrow(a)) {
+	for(j in 1:ncol(a)) {
+		cost[i,j]<-max(a)-a[i,j]
+	}
+}
+sol<-HungarianSolver(cost)$pairs
+print(sol)
+score<-0
+for(i in 1:nrow(sol)) {
+	score <- score + a[i,sol[i,2]]
+}
+print(score)
+
